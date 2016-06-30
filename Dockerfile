@@ -223,17 +223,16 @@ ENV \
 #================
 # Binary scripts
 #================
-ADD bin/* ${BIN_UTILS}/
-ADD host-scripts/* /host-scripts/
-ADD test/* /test/
-ADD test/run_test.sh /usr/bin/run_test
+#ADD bin/* ${BIN_UTILS}/
+#ADD host-scripts/* /host-scripts/
+#ADD test/* /test/
+#ADD test/run_test.sh /usr/bin/run_test
 
 #==========
 # Fix dirs
 #==========
 # Create and fix directories perms
 RUN  sudo chown -R ${NORMAL_USER}:${NORMAL_GROUP} ${NORMAL_USER_HOME} \
-  && sudo chown -R ${NORMAL_USER}:${NORMAL_GROUP} /test \
   && echo ""
 
 CMD ["irb"]
